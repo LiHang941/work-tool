@@ -1,0 +1,6 @@
+dependencies {
+    compileOnly "org.springframework.boot:spring-boot-starter-data-redis:$springBootVersion"
+    compileOnly "com.alibaba:fastjson:$fastjsonVersion"
+    compileOnly "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compileOnly "org.redisson:redisson:$redissonVersion"
+}

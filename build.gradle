@@ -1,0 +1,48 @@
+buildscript {
+    ext {
+        okHttpVersion = '4.8.0'
+        jacksonVersion = '2.11.1'
+        fastjsonVersion = '1.2.72'
+        commonLang3Version = '3.11'
+        commonIOVersion = '2.7'
+        springVersion = '5.2.7.RELEASE'
+        springBootVersion = '2.3.1.RELEASE'
+        redissonVersion = '3.13.2'
+        commonCodecVersion = '1.14'
+    }
+}
+
+
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+
+    compileJava.dependsOn(processResources)
+
+    compileJava {
+        options.encoding = "UTF-8"
+    }
+
+
+    repositories {
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public"}
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+
+
+}
+
+task addWrapper(type: Wrapper) {
+    gradleVersion = '6.5.1'
+}

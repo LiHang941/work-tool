@@ -1,0 +1,8 @@
+dependencies {
+    implementation "org.apache.commons:commons-lang3:$commonLang3Version"
+    implementation "commons-codec:commons-codec:$commonCodecVersion"
+    implementation "commons-io:commons-io:$commonIOVersion"
+    implementation "com.alibaba:fastjson:$fastjsonVersion"
+    compileOnly "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    compileOnly "org.springframework:spring-beans:$springVersion"
+}
