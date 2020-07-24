@@ -1,0 +1,5 @@
+dependencies {
+    compile project(":tool-lib")
+    compile project(":tool-redis")
+    compile project(":tool-spring")
+}

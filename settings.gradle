@@ -2,4 +2,5 @@ rootProject.name = 'work-tool'
 include 'tool-lib'
 include 'tool-redis'
 include 'tool-spring'
+include 'tool-all'
 
